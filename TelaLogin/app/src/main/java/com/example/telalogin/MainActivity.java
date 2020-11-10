@@ -24,15 +24,22 @@ public class MainActivity extends AppCompatActivity {
                 String senha = tSenha.getText().toString();
 
                 if(login.equals("Ezio")&&senha.equals("8426")){
-                    alert("login realizado com sucesso");
+                    public void alterarTexto(View view){
+                        TextView texto = findViewById(R.id.tStatusLogin);
+                        texto.setText("Login efetuado com sucesso");
+                    }
+                    //alert("login realizado com sucesso");
                 } else {
-                    alert("Login ou senha incorreto, tente novamente");
+                    public void alterarTexto(View view){
+                        TextView texto = findViewById(R.id.tStatusLogin);
+                        texto.setText("Usuario ou senha invalido");
+                    }
                 }
             }
         });
 }
-    private void alert (String s) {
-        Toast.makeText(this, s, Toast.LENGTH_LONG).show();
+   // private void alert (String s) {
+    //    Toast.makeText(this, s, Toast.LENGTH_LONG).show();
 
-    }
+  //  }
 }
