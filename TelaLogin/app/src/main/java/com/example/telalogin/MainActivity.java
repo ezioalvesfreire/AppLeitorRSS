@@ -14,32 +14,32 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btLogin = (Button) findViewById(R.id.buttonLogin);
-        btLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TextView tLogin = (TextView) findViewById(R.id.tUser);
-                TextView tSenha = (TextView) findViewById(R.id.tPassword);
-                String login = tLogin.getText().toString();
-                String senha = tSenha.getText().toString();
 
-                if(login.equals("Ezio")&&senha.equals("8426")){
-                    public void alterarTexto(View view){
-                        TextView texto = findViewById(R.id.tStatusLogin);
+
+        Button buttonLogin = (Button) findViewById(R.id.buttonLogin);
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+                public void alterarTexto(View view){
+                   TextView tUser = (TextView) findViewById(R.id.tUser);
+                   TextView tPassword = (TextView) findViewById(R.id.tPassword);
+                   String login = tUser.getText().toString();
+                   String senha = tPassword.getText().toString();
+
+                    TextView texto = findViewById(R.id.tStatusLogin);
+                    if(login.equals("Ezio")&&senha.equals("8426")){
                         texto.setText("Login efetuado com sucesso");
-                    }
-                    //alert("login realizado com sucesso");
-                } else {
-                    public void alterarTexto(View view){
-                        TextView texto = findViewById(R.id.tStatusLogin);
+                    } else {
                         texto.setText("Usuario ou senha invalido");
                     }
+
                 }
-            }
+
         });
 }
-   // private void alert (String s) {
-    //    Toast.makeText(this, s, Toast.LENGTH_LONG).show();
+    private void alert (String s) {
+    Toast.makeText(this, s, Toast.LENGTH_LONG).show();
 
-  //  }
+    }
 }

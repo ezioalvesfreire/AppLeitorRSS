@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void alterarTexto(View view){
         TextView texto = findViewById(R.id.textoExibicao);
-        texto.setText("Login efetuado com sucesso");
+        texto.setText("Ezio");
     }
 
 }
