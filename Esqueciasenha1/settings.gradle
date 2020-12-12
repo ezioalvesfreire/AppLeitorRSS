@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "Esqueci a senha1"
